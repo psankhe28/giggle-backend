@@ -1,0 +1,27 @@
+{
+  "name": "giggle-backend",
+  "version": "1.0.0",
+  "description": "Backend for Gigglle Challenge Submission",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "chalk": "^5.4.1",
+    "express": "^5.1.0",
+    "multer": "^2.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  },
+  "keywords": [
+    "express",
+    "backend",
+    "challenge",
+    "submission"
+  ],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,74 @@
+{
+  "info": {
+    "name": "Gigglle Backend API",
+    "_postman_id": "1a2b3c4d-5678-9012-3456-7890abcdef12",
+    "description": "Postman collection for testing the Gigglle challenge submission backend.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "GET /challenges",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/challenges",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["challenges"]
+        }
+      }
+    },
+    {
+      "name": "POST /submissions",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"videoUrl\": \"video1.mp4\",\n  \"stickers\": [\"🔥\", \"😂\"],\n  \"challengeId\": \"1\",\n  \"duration\": 14\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/submissions",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["submissions"]
+        }
+      }
+    },
+    {
+      "name": "GET /submissions",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/submissions",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["submissions"]
+        }
+      }
+    },
+    {
+      "name": "POST /submissions/preview",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"videoUrl\": \"preview_video.mp4\",\n  \"stickers\": [\"🎉\", \"😍\"],\n  \"challengeId\": \"3\",\n  \"duration\": 12\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/submissions/preview",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["submissions", "preview"]
+        }
+      }
+    }
+  ]
+}
